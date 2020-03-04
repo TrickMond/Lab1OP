@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>1_lab</name>
+    </assembly>
+    <members>
+        <member name="T:_1_lab.Menu">
+            <summary>
+            Меню
+            </summary>
+        </member>
+        <member name="M:_1_lab.Menu.Title">
+            <summary>
+            Вывод всего меню
+            </summary>
+        </member>
+        <member name="M:_1_lab.Program.Main(System.String[])">
+             <summary>
+            Enter-point of program
+             </summary>
+             <param name="args">inputed args</param>
+        </member>
+        <member name="T:_1_lab.Reader">
+            <summary>
+            Чтение и запись текстовых файлов
+            </summary>
+        </member>
+        <member name="M:_1_lab.Reader.Read(System.String)">
+            <summary>
+            Чтение файла
+            </summary>
+            <param name="path">Путь</param>
+            <returns>Строка, ситанная из файла </returns>
+        </member>
+        <member name="M:_1_lab.Reader.Write(System.String,System.String,System.String)">
+            <summary>
+            Запись в файл
+            </summary>
+            <param name="path">Путь</param>
+            <param name="data">Строка</param>
+            <param name="method">a - добавить в конец файла, n - создать и записать в файл</param>
+        </member>
+    </members>
+</doc>
