@@ -1,77 +1,38 @@
+using System.Linq;
 namespace _1_lab
 {
     /// <summary>
-    /// Класс для чтения txt файла
+    /// Чтение и запись текстовых файлов
     /// </summary>
-    public class Reader
+    public static class Reader
     {
-        private string path;
-        private string data;
         /// <summary>
-        ///Constructor
+        /// Чтение файла
         /// </summary>
-        /// <param name="_path">File path</param>
-        /// <param name="_data">String that will writed to the file</param>
-        public Reader(string _path,string _data=null)
-        {
-            this.path = _path;
-            this.data=_data;
-        }
-        /// <summary>
-        ///Constructor without args
-        /// </summary>
-        public Reader()
-        {
-            this.path=null;
-            this.data=null;
-        }
-        /// <summary>
-        ///Set file path
-        /// </summary>
-        /// <param name="_path">File path</param>
-        public void Path(string _path)
-        {
-            this.path = _path;
-        }
-        /// <summary>
-        /// String that will be writed to file
-        /// </summary>
-        /// <param name="_data">String</param>
-        public void Data(string _data)
-        {
-            this.data = _data;
-        }
-        /// <summary>
-        ///Confert txt file to string
-        /// </summary>
-        /// <returns></returns>
-        public string FileToString()
+        /// <param name="path">Путь</param>
+        /// <returns>Строка, ситанная из файла </returns>
+        public static string Read(string path)
         {
             string s = System.IO.File.ReadAllText(path).Replace("\n", " ");
             return s;
         }
         /// <summary>
-        ///Convert string to file
+        /// Запись в файл
         /// </summary>
-        public void StringToNewFile()
+        /// <param name="path">Путь</param>
+        /// <param name="data">Строка</param>
+        /// <param name="method">a - добавить в конец файла, n - создать и записать в файл</param>
+        public static void  Write(string path, string data, string method)
         {
-            System.IO.File.WriteAllText(path,data);
-        }
-        /// <summary>
-        ///Append file by string
-        /// </summary>
-        public void AppendFile()
-        {
+            switch(method)
+            {
+            case "a":
             System.IO.File.AppendAllText(path,data);
-        }
-        /// <summary>
-        ///Make copy of file
-        /// </summary>
-        /// <param name="FromFile">Name of copied file</param>
-        /// <param name="ToFile">Name of new file</param>
-        public static void CopyFile(string FromFile, string ToFile)
-        {
-            System.IO.File.Copy(FromFile,ToFile,true);
+            break;
+            case "n":
+            System.IO.File.WriteAllText(path,data);
+            break;
+            }
         }
     }
 }

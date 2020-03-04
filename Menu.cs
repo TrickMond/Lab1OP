@@ -6,26 +6,20 @@ namespace _1_lab
     public static class Menu
     {
         
-        private const string titleMessage = "\tМеню:\n1) path - изменить путь к файлу;\n2) data - строка для записи;\n3) read - чтение из файла;\n4) write - запись в файл";
-        private const string Message = "\tВведите строку:";
-         private const string caseMessage = "1) app - записать в конец файла;\n2) rew - перезаписать файл";
+        private const string titleMessage = "\tМеню:\n1) read - чтение из файла;\n2) write - запись в файл";
+        private const string Message = "\tВведите путь к файлу:";
+         private const string caseMessage = "a - записать в конец файла;\nn - перезаписать файл";
          private const string errMessage = "Выберете из списка!";
          /// <summary>
-         ///Menu
+         /// Вывод всего меню
          /// </summary>
-         /// <param name="r">Inputed Reader</param>
-        public static void Title(Reader r)
+        public static void Title()
         {
             System.Console.WriteLine(titleMessage);
             int t = System.Convert.ToInt32(System.Console.ReadLine());
-            Execute(t,r);
+            Execute(t);
         }
-        /// <summary>
-        ///Command execute
-        /// </summary>
-        /// <param name="command">Command</param>
-        /// <param name="r">Reader</param>
-        private static void Execute(int command, Reader r)
+        private static void Execute(int command)
         {
             string temp;
             switch(command)
@@ -33,37 +27,19 @@ namespace _1_lab
                 case 1:
                 System.Console.WriteLine(Message);
                 temp =System.Console.ReadLine();
-                r.Path(temp);
+                System.Console.WriteLine(Reader.Read(temp));
                 break;
                 case 2:
-               System.Console.WriteLine(Message);
+                System.Console.WriteLine(Message);
                 temp =System.Console.ReadLine();
-                r.Data(temp);
-                break;
-                case 3:
-               System. Console.WriteLine(r.FileToString());
-               break;
-               case 4:
-               System. Console.WriteLine(caseMessage);
-               int t = System.Convert.ToInt32(System.Console.ReadLine());
-               switch (t)
-                {
-                    case 1:
-                    r.AppendFile();
-                    break;
-                    case 2:
-                   r.StringToNewFile();
-                   break;
-                   default:
-                    System. Console.WriteLine(errMessage);
-                    break;
-               }
-               break;
-               default:
-                System. Console.WriteLine(errMessage);
+                System.Console.WriteLine("Введите строку:");
+                string data =System.Console.ReadLine();
+                System.Console.WriteLine(caseMessage);
+                string method =System.Console.ReadLine();
+                Reader.Write(temp,data,method);
                 break;
             }
-            Title(r);
+            Title();
         }
     }
 }

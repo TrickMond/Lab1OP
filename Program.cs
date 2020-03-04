@@ -10,9 +10,9 @@ namespace _1_lab
         /// <param name="args">inputed args</param>
         static void Main(string[] args)
         {
-            Reader r = new Reader();
-            Menu.Title(r);
+            Menu.Title();
         }
+        
     }
 }
 /*СРАВНЕНИЕ ФАЙЛОВ

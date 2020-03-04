@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ЧЕРНЫЙ\\Desktop\\ЗАЕБАЛ\\1_lab.csproj": {}
+    "C:\\Users\\ЧЕРНЫЙ\\Desktop\\OP\\1_lab.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ЧЕРНЫЙ\\Desktop\\ЗАЕБАЛ\\1_lab.csproj": {
+    "C:\\Users\\ЧЕРНЫЙ\\Desktop\\OP\\1_lab.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ЧЕРНЫЙ\\Desktop\\ЗАЕБАЛ\\1_lab.csproj",
+        "projectUniqueName": "C:\\Users\\ЧЕРНЫЙ\\Desktop\\OP\\1_lab.csproj",
         "projectName": "1_lab",
-        "projectPath": "C:\\Users\\ЧЕРНЫЙ\\Desktop\\ЗАЕБАЛ\\1_lab.csproj",
+        "projectPath": "C:\\Users\\ЧЕРНЫЙ\\Desktop\\OP\\1_lab.csproj",
         "packagesPath": "C:\\Users\\ЧЕРНЫЙ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ЧЕРНЫЙ\\Desktop\\ЗАЕБАЛ\\obj\\",
+        "outputPath": "C:\\Users\\ЧЕРНЫЙ\\Desktop\\OP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ЧЕРНЫЙ\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -39,14 +39,6 @@
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.5.0, )"
-            },
-            "xunit": {
-              "target": "Package",
-              "version": "[2.4.1, )"
-            },
-            "xunit.runner.visualstudio": {
-              "target": "Package",
-              "version": "[2.4.1, )"
             }
           },
           "imports": [
