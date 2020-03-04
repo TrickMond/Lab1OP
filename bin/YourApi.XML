@@ -4,6 +4,19 @@
         <name>1_lab</name>
     </assembly>
     <members>
+        <member name="T:_1_lab.Crypto">
+            <summary>
+            Класс для шифрования/дешифромания с помощтю XOR
+            </summary>
+        </member>
+        <member name="M:_1_lab.Crypto.Encode(System.String,System.String,System.String)">
+            <summary>
+            Кодирование/Декодирование файлов
+            </summary>
+            <param name="Path">Путь</param>
+            <param name="pKey">Пароль для шифрации</param>
+            <param name="method">"e" - шифрация, "d" - дешифрация</param>
+        </member>
         <member name="T:_1_lab.Menu">
             <summary>
             Меню
@@ -39,6 +52,13 @@
             <param name="path">Путь</param>
             <param name="data">Строка</param>
             <param name="method">a - добавить в конец файла, n - создать и записать в файл</param>
+        </member>
+        <member name="M:_1_lab.Reader.GetFileInfo(System.String)">
+            <summary>
+            Информация о файле
+            </summary>
+            <param name="path">Путь</param>
+            <returns>List of strings: [1] - имя файла, [2] -время создания, [3] - размер </returns>
         </member>
     </members>
 </doc>
