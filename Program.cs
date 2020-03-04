@@ -1,4 +1,5 @@
-﻿using System;
+///AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+using System;
 
 namespace _1_lab
 {
