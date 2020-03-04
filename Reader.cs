@@ -34,5 +34,22 @@ namespace _1_lab
             break;
             }
         }
+        /// <summary>
+        /// Информация о файле
+        /// </summary>
+        /// <param name="path">Путь</param>
+        /// <returns>List of strings: [1] - имя файла, [2] -время создания, [3] - размер </returns>
+        public static System.Collections.Generic.List<string> GetFileInfo(string path)
+        {
+            var res = new System.Collections.Generic.List<string>();
+            var temp = new System.IO.FileInfo(path);
+            if (temp.Exists)
+            {
+                res.Add(temp.Name);
+                res.Add(temp.CreationTime.ToString());
+                res.Add(temp.Length.ToString());
+            }
+            return res;
+        }
     }
 }
