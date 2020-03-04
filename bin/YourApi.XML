@@ -60,5 +60,12 @@
             <param name="path">Путь</param>
             <returns>List of strings: [1] - имя файла, [2] -время создания, [3] - размер </returns>
         </member>
+        <member name="M:_1_lab.Reader.Palindrom(System.String)">
+            <summary>
+            Количество палиндромов в файле
+            </summary>
+            <param name="path">Путь к файлу</param>
+            <returns>Количество слов - палиндромов</returns>
+        </member>
     </members>
 </doc>
