@@ -51,5 +51,24 @@ namespace _1_lab
             }
             return res;
         }
+        /// <summary>
+        ///  Количество палиндромов в файле
+        /// </summary>
+        /// <param name="path">Путь к файлу</param>
+        /// <returns>Количество слов - палиндромов</returns>
+        public static int Palindrom(string path)
+        {
+            int temp = 0;
+            string[] words = System.IO.File.ReadAllText(path).Split(" ");
+            foreach (string word in words)
+            {
+               if (word.SequenceEqual(word.Reverse()))
+               {
+                   System.Console.WriteLine(word);
+                   temp++;
+               }
+            }
+            return temp;
+        }
     }
 }
